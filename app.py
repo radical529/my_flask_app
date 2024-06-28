@@ -9,6 +9,7 @@ DATABASE = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'log_hours.d
 
 # Initialize the database
 def init_db():
+    print("Initializing database...")
     conn = sqlite3.connect(DATABASE)
     cursor = conn.cursor()
     cursor.execute('''
@@ -20,6 +21,7 @@ def init_db():
     ''')
     conn.commit()
     conn.close()
+    print("Database initialized.")
 
 @app.route('/')
 def index():
