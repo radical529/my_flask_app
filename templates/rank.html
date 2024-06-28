@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ranked Log Hours</title>
+</head>
+<body>
+    <h1>Log Hours by Rank (Names Erased)</h1>
+    <ul>
+    {% for hours in log_hours %}
+        <li>{{ loop.index }}: {{ hours[0] }} hours</li>
+    {% endfor %}
+    </ul>
+    <a href="/">Go Back</a>
+</body>
+</html>
